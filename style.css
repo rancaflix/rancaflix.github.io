@@ -61,6 +61,7 @@ header > a {
 }
 
 /* --- month selection view elements --- */
+
 #calendarview {
     box-sizing: border-box;
     padding-left: 5%;

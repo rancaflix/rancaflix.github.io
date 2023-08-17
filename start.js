@@ -20,3 +20,4 @@ moreButton.onclick = function() {
     location.assign("/calendar.html")
 }
 homecard.appendChild(moreButton);
+
