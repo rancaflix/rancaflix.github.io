@@ -1,5 +1,6 @@
 import handleMonth from "./handleMonth.js";
 import querySong from "./querySong.js";
+import youtubeButton from "./youtubeButton.js";
 
 const dayView = async (month, day) => {
     // make monthview disappear
@@ -43,9 +44,16 @@ const dayView = async (month, day) => {
     .then(songs => {
         if (songs.length > 0){
             songs.forEach(song => {
-                const songInfo = document.createElement("p");
-                songInfo.textContent = `${song.Artist} - ${song.Song} (${song.Language})`
-                dayView.appendChild(songInfo);                
+                const songInfo = document.createElement("span");
+                songInfo.classList.add("songspan");
+                const songText = document.createElement("p");
+                songInfo.style.display = "block";
+                songText.style.display = "inline";
+                songText.textContent = `${song.Artist} - ${song.Song} (${song.Language})`;
+                songInfo.appendChild(songText);
+                dayView.appendChild(songInfo);
+                const ytButton = youtubeButton(song.Artist, song.Song);
+                songInfo.appendChild(ytButton)
             });
         } else {
             const songInfo = document.createElement("p");

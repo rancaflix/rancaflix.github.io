@@ -33,6 +33,10 @@ header > a {
     font-size: xx-large;
 }
 
+#todayspan {
+    font-size: x-large;
+}
+
 #consultMoreButton {
     display: inline-block;
     border: none;
@@ -147,6 +151,24 @@ header > a {
 
 #dayView {
     font-size: x-large;
+}
+
+#yrbutton {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#todayspan img {
+    width: 60px;
+    height: 60px;
+}
+
+.songspan {
+    border-bottom: 1px solid black;
 }
 
 /* --- responsive --- */
